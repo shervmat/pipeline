@@ -136,7 +136,7 @@
             "name":"objectTracker",
             "inputs":[
                 {
-                   "nodeName":"GrpcExtension"
+                   "nodeName":"grpcExtension"
                 }
              ]
          }
@@ -148,14 +148,14 @@
           "hubOutputName": "${hubSinkOutputName}",
           "inputs": [
             {
-              "nodeName": "grpcExtension"
+              "nodeName": "objectTracker"
             }
           ]
         },
         {
           "@type": "#Microsoft.VideoAnalyzer.VideoSink",
           "name": "videoSink",
-          "videoName": "sample-grpc-extension",
+          "videoName": "sample-cvr-with-inference-metadata",
           "inputs": [
             {
               "nodeName": "rtspSource",
@@ -166,11 +166,14 @@
                   "value": "video"
                 }
               ]
+            },
+            {
+                "nodeName":"objectTracker"
             }
           ],
           "videoCreationProperties": {
-            "title": "sample-grpc-extension",
-            "description": "Sample video using gRPC extension",
+            "title": "sample-cvr-with-inference-metadata",
+            "description": "Sample video recording where inferencing metadata (generated via a HTTP extension and object tracking) is recorded along with media",
             "segmentLength": "PT30S"
           },
           "localMediaCachePath": "/var/lib/videoanalyzer/tmp/",
@@ -179,3 +182,4 @@
       ]
     }
   }
+  
