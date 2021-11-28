@@ -136,7 +136,7 @@
             "name":"objectTracker",
             "inputs":[
                 {
-                   "nodeName":"grpcExtension"
+                   "nodeName":"GrpcExtension"
                 }
              ]
          }
