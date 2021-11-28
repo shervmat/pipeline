@@ -170,6 +170,9 @@
                 }
               ]
             },
+              {
+            "nodeName": "grpcExtension"
+          },
             {
                 "nodeName":"objectTracker"
             }
