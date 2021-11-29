@@ -157,7 +157,7 @@
         {
           "@type": "#Microsoft.VideoAnalyzer.VideoSink",
           "name": "videoSink",
-          "videoName": "sample-cvr-with-Grpcinference-metadata",
+          "videoName": "Shervin28NovemWrok-cvr-with-Grpcinference-metadata",
           "inputs": [
             {
               "nodeName": "rtspSource",
@@ -177,7 +177,7 @@
             }
           ],
           "videoCreationProperties": {
-            "title": "sample-cvr-with-Grpcinference-metadata",
+            "title": "Shervin28NovemWrok-cvr-with-Grpcinference-metadata",
             "description": "Sample video recording where inferencing metadata (generated via a HTTP extension and object tracking) is recorded along with media",
             "segmentLength": "PT30S"
           },
