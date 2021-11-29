@@ -101,7 +101,7 @@
           },
           "dataTransfer": {
             "mode": "sharedMemory",
-            "SharedMemorySizeMiB": "20"
+            "SharedMemorySizeMiB": "55"
           },
           "image": {
             "scale": {
