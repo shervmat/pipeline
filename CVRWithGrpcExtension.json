@@ -110,7 +110,9 @@
               "height": "${frameHeight}"
             },
             "format": {
-              "@type": "#Microsoft.VideoAnalyzer.ImageFormatJpeg"
+              "@type": "#Microsoft.VideoAnalyzer.ImageFormatJpeg",
+              "quality": "${imageQuality}"
+                
             }
           },
           "samplingOptions": {
