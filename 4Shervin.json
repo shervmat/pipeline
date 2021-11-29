@@ -111,7 +111,7 @@
           },
           "format": {
             "@type": "#Microsoft.VideoAnalyzer.ImageFormatBmp"
-          }
+            }
         },
         "samplingOptions": {
           "skipSamplesWithoutAnnotation": "false",
