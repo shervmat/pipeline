@@ -101,7 +101,7 @@
         },
         "dataTransfer": {
           "mode": "sharedMemory",
-          "SharedMemorySizeMiB": "75"
+          "SharedMemorySizeMiB": "56"
         },
         "image": {
           "scale": {
@@ -110,8 +110,7 @@
             "height": "${frameHeight}"
           },
           "format": {
-            "@type": "#Microsoft.VideoAnalyzer.ImageFormatJpeg",
-            "quality": "${imageQuality}"
+            "@type": "#Microsoft.VideoAnalyzer.ImageFormatBmp"
           }
         },
         "samplingOptions": {
