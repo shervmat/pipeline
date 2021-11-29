@@ -112,6 +112,7 @@
           "format": {
             "@type": "#Microsoft.VideoAnalyzer.ImageFormatJpeg",
             "quality": "${imageQuality}"
+          }
         },
         "samplingOptions": {
           "skipSamplesWithoutAnnotation": "false",
