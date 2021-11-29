@@ -110,7 +110,7 @@
               "height": "${frameHeight}"
             },
             "format": {
-              "@type": "#Microsoft.VideoAnalyzer.ImageFormatBmp",
+              "@type": "#Microsoft.VideoAnalyzer.ImageFormatBmp"
                    }
           },
           "samplingOptions": {
