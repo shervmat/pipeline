@@ -130,7 +130,16 @@
             ]
           }
         ]
-      }
+      },
+      {
+            "@type":"#Microsoft.VideoAnalyzer.ObjectTrackingProcessor",
+            "name":"objectTracker",
+            "inputs":[
+                {
+                   "nodeName":"grpcExtension"
+                }
+             ]
+         }
     ],
     "sinks": [
       {
