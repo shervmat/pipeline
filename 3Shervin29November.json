@@ -101,7 +101,7 @@
         },
         "dataTransfer": {
           "mode": "sharedMemory",
-          "SharedMemorySizeMiB": "56"
+          "SharedMemorySizeMiB": "75"
         },
         "image": {
           "scale": {
@@ -110,7 +110,8 @@
             "height": "${frameHeight}"
           },
           "format": {
-            "@type": "#Microsoft.VideoAnalyzer.ImageFormatBmp"
+            "@type": "#Microsoft.VideoAnalyzer.ImageFormatJpeg",
+            "quality": "${imageQuality}"
           }
         },
         "samplingOptions": {
@@ -141,44 +142,43 @@
      }
     ],
     "sinks": [
-        {
-          "@type": "#Microsoft.VideoAnalyzer.IotHubMessageSink",
-          "name": "hubSink",
-          "hubOutputName": "${hubSinkOutputName}",
-          "inputs": [
-            {
-              "nodeName": "objectTracker"
-            }
-          ]
-        },
-        {
-          "@type": "#Microsoft.VideoAnalyzer.VideoSink",
-          "name": "videoSink",
-          "videoName": "grpcShervinExtension",
-          "inputs": [
-            {
-              "nodeName": "rtspSource",
-              "outputSelectors": [
-                {
-                  "property": "mediaType",
-                  "operator": "is",
-                  "value": "video"
-                }
-              ]
-            },
-            {
-                "nodeName":"objectTracker"
-            }
-          ],
-          "videoCreationProperties": {
-            "title": "grpcShervinExtension",
-            "description": "Sample video recording where inferencing metadata (generated via a HTTP extension and object tracking) is recorded along with media",
-            "segmentLength": "PT30S"
+      {
+        "@type": "#Microsoft.VideoAnalyzer.IotHubMessageSink",
+        "name": "hubSink",
+        "hubOutputName": "${hubSinkOutputName}",
+        "inputs": [
+          {
+            "nodeName": "objectTracker"
+          }
+        ]
+      },
+      {
+        "@type": "#Microsoft.VideoAnalyzer.VideoSink",
+        "name": "videoSink",
+        "videoName": "latestgrpcShervin",
+        "inputs": [
+          {
+            "nodeName": "rtspSource",
+            "outputSelectors": [
+              {
+                "property": "mediaType",
+                "operator": "is",
+                "value": "video"
+              }
+            ]
           },
-          "localMediaCachePath": "/var/lib/videoanalyzer/tmp/",
-          "localMediaCacheMaximumSizeMiB": "2048"
-        }
-      ]
-    }
+          {
+              "nodeName":"objectTracker"
+          }
+        ],
+        "videoCreationProperties": {
+          "title": "sample-cvr-with-inference-metadata",
+          "description": "Sample video recording where inferencing metadata (generated via a HTTP extension and object tracking) is recorded along with media",
+          "segmentLength": "PT30S"
+        },
+        "localMediaCachePath": "/var/lib/videoanalyzer/tmp/",
+        "localMediaCacheMaximumSizeMiB": "2048"
+      }
+    ]
   }
-  
+}
